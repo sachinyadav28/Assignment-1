@@ -1,0 +1,27 @@
+a.) 
+Negative indexing means beginning from the end, -1 refers to the last item, -2 refers to the second last item etc.
+
+b.)
+The Python standard library provides a module called random that offers a suite of functions for generating random numbers.
+
+c.)
+The floor division // rounds the result down to the nearest whole number.
+
+d.)
+Iterator --
+*Python iterator objects are required to support two methods while following the iterator protocol.
+*__iter__ returns the iterator object itself. This is used in for and in statements.
+*__next__ method returns the next value from the iterator. If there is no more items to return then it should raise StopIteration exception.
+
+Generators --
+*We create a simple generator using the yield statements. We can use it in a for loop just like we use any other iterators.
+*We mostly use generators for laze evaluations. This way generators become a good approach to work with lots of data. If you don’t want to load all the data in the memory, you can use a generator which will pass you each piece of data at a time.
+
+Decorators --
+*Decorator is way to dynamically add some new behavior to some objects. We achieve the same in Python by using closures.
+
+e.)
+*Syntax difference (List [], Tuple ())
+*List are Mutable and Tuple are Immutable
+*List can be copied and Tuple can't be copied.
+*Tuples are faster than lists when they have larger number of elements. 
