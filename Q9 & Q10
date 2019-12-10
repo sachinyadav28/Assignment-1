@@ -1,8 +1,19 @@
 Q9.
+What will be the output of the following Python code?
+def foo(x):
+x[0] = ['def']
+x[1] = ['abc']
+return id(x)
+q = ['abc', 'def']
+print(id(q) == foo(q))
 
-True
+
+A9. True
 
 Q10.
+What will be the output of the following Python code and explain how?
+['true', 'false'][bool('SPAM')]
 
+A10.
 'false'
 As indexing of 'false' is True.
