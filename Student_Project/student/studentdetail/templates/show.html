@@ -1,0 +1,18 @@
+     {% load staticfiles %}  
+{% for student in students %}  
+        {{ student.first_name }} 
+        {{ student.middle_name }}  
+        {{ student.last_name }}  
+        {{ student.gender }}
+        {{ student.date_of_birth }}
+        {{ student.roll_no }}
+        {{ student.father_name }}
+        {{ student.mother_name }}
+        {{ student.address }}
+        {{ student.class_teacher }}  
+        <td>  
+            <a href="/edit/{{ student.id }}"><span >Edit</span></a>  
+            <a href="/delete/{{ student.id }}">Delete</a>  
+        </td>  
+{% endfor %}  
+<center><a href="/students" >Add New Record</a></center>  

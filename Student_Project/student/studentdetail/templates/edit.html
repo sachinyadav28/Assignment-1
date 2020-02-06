@@ -1,0 +1,27 @@
+    {% load staticfiles %}  
+<form method="POST" action="/update/{{student.id}}">  
+        {% csrf_token %}  
+    <h3>Update Details</h3>  
+    <label >Student First Name:</label>
+        <input type="text" name="first_name" id="id_first_name" required maxlength="20" value="{{ student.first_name }}"/>  
+    <label >Student Middle Name:</label>  
+        <input type="text" name="middle_name" id="id_middle_name" required maxlength="100" value="{{ student.middle_name }}" />  
+    <label >Student Last Name:</label>  
+        <input type="text" name="last_name" id="id_last_name" required maxlength="254" value="{{ student.last_name }}" />  
+    <label >Student Gender:</label>  
+        <input type="text" name="gender" id="id_gender" required maxlength="15" value="{{ student.gender }}" />  
+    <label >Student Date of Birth:</label>  
+        <input type="text" name="gender" id="id_date_of_birth" required maxlength="15" value="{{ student.date_of_birth }}" />  
+    <label >Student Roll No:</label>  
+        <input type="text" name="gender" id="id_roll_no" required maxlength="10" value="{{ student.roll_no }}" />  
+    <label >Student Father Name:</label>  
+        <input type="text" name="gender" id="id_father_name" required maxlength="100" value="{{ student.father_name }}" />  
+    <label >Student Mother Name:</label>  
+        <input type="text" name="gender" id="id_mother_name" required maxlength="100" value="{{ student.mother_name }}" />  
+    <label >Student Address:</label>  
+        <input type="text" name="gender" id="id_address" required maxlength="100" value="{{ student.address }}" />  
+    <label >Student Class Teacher:</label>  
+        <input type="text" name="gender" id="id_class_teacher" required maxlength="100" value="{{ student.class_teacher }}" />  
+
+    <button >Update</button>  
+</form>  
