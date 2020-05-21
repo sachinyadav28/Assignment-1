@@ -4,10 +4,9 @@ from rest_framework.reverse import reverse as api_reverse
 from user.jwt.serializers import UserPublicSerializer
 from status.models import Status
 
-
 class StatusSerializer(serializers.ModelSerializer):
-    uri             = serializers.SerializerMethodField(read_only=True)
-    user            = UserPublicSerializer(read_only=True)
+    uri = serializers.SerializerMethodField(read_only=True)
+    user = UserPublicSerializer(read_only=True)
 
     class Meta:
         model = Status 
@@ -35,10 +34,13 @@ class StatusSerializer(serializers.ModelSerializer):
 
 
 class StatusInlineUserSerializer(StatusSerializer):
+    username = serializers.CharField(read_only=True, source='user.username')
+
     class Meta:
         model = Status 
         fields =[
-            'uri',
+           'uri',
+           'username',
             'id',
             'content',
             'image'

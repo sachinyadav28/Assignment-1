@@ -22,12 +22,13 @@ class UserDetailAPIView(generics.RetrieveAPIView):
 
 class UserStatusAPIView(StatusAPIView):
     serializer_class            = StatusInlineUserSerializer
+    queryset = Status.objects.all()
     
-    def get_queryset(self, *args, **kwargs):
-        username = self.kwargs.get("username", None)
-        if username is None:
-            return Status.objects.none()
-        return Status.objects.filter(user__username=username)
+    # def get_queryset(self, *args, **kwargs):
+    #     username = self.kwargs.get("username", None)
+    #     if username is None:
+    #         return Status.objects.none()
+    #     return Status.objects.filter(user__username=username)
 
     def post(self, request, *args, **kwargs):
         return Response({"detail": "Not allowed here"}, status=400)
